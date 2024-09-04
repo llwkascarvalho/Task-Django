@@ -1,11 +1,17 @@
-# Ambiente Virtual
+# Ignore the virtual environment folder
 venv/
-.env
 
-# Arquivos Python compilados
-__pycache__/
-*.py[cod]
+# Ignore database file
 *.sqlite3
 
-# Diretórios de migração do Django
-*/migrations/
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+*.so
+
+# Ignore environment variable files (if applicable)
+.env
+
+# Ignore IDE/editor-specific files (e.g., VSCode, PyCharm)
+.vscode/
+.idea/
