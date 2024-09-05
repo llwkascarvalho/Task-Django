@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'tasks/css/task_list.css' %}">
+{% endblock head %}
+
+{% block content %}
+
+    <table class="content-table">
+        <thead>
+            <tr>
+                <th>Titulo</th>
+                <th>Status</th>
+                <th>Descrição</th>
+                <th>Data de criação</th>
+                <th>Data de vencimento</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for task in tasks %}
+                <tr>
+                    <td>{{ task.title}}</td>
+                    <td>{{task.status}}</td>
+                    <td>{{task.description}}</td>
+                    <td>{{task.created_at}}</td>
+                    <td>{{task.due_date}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock content %}
+
