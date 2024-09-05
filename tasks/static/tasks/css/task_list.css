@@ -27,6 +27,26 @@
     background-color: #d6bf8580;
 }
 
+tbody td button{
+    background-color: #437C90;
+    padding: 8px 16px;
+    width: fit-content;
+    border-radius: 10px;
+    border: none;
+}
+
+.btn-editar{
+    background-color: rgb(58, 53, 194);
+}
+.btn-excluir{
+    background-color: rgb(161, 29, 29);
+}
+tbody td button a {
+    color: white;
+}
+
+
+
 
 
 

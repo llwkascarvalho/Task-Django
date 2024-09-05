@@ -9,21 +9,28 @@
     <table class="content-table">
         <thead>
             <tr>
+                <th>ID</th>
                 <th>Titulo</th>
                 <th>Status</th>
                 <th>Descrição</th>
                 <th>Data de criação</th>
                 <th>Data de vencimento</th>
+                <th>Ações</th>
             </tr>
         </thead>
         <tbody>
             {% for task in tasks %}
                 <tr>
+                    <td>{{ task.pk}}</td>
                     <td>{{ task.title}}</td>
                     <td>{{task.status}}</td>
                     <td>{{task.description}}</td>
                     <td>{{task.created_at}}</td>
                     <td>{{task.due_date}}</td>
+                    <td>
+                        <button class="btn-editar"><a href="{% url "task-edit" pk=task.pk %}">Editar</a></button>
+                        <button class="btn-excluir"><a href="#">Excluir</a></button>
+                    </td>
                 </tr>
             {% endfor %}
         </tbody>

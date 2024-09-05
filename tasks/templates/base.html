@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,12 +8,13 @@
     <title>Lista de atividades</title>
     <link rel="stylesheet" href="static\tasks\css\task_list.css">
     <link rel="stylesheet" href="static\tasks\css\base.css">
+    <link rel="shortcut icon" href="{% static 'tasks/img/logo.png' %}" type="image/x-icon">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="navdiv">
-                <div class="logo"><a href="#">listDjango</a></div>
+                <div class="logo"><a href="#">listDjango</a><img src="{% static 'tasks/img/logo.png' %}" alt=""></div>
                 <ul>
                     <li><a href="{% url 'task-list' %}">Lista de atividades</a></li>
                 </ul>
