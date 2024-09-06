@@ -1,15 +1,15 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
-    <h1>Editar tarefa</h1>
-
-    <form method="post" class="form">
-        {% csrf_token %}
-        {{form.as_p}}
-        <button type="submit">Salvar alterações</button>
-
-    </form>
-    <a href="{% url "task-list" %}">Lista de tarefas</a>
+    <div class="container-edit">
+        <h1>Editar tarefa</h1>
+        <form method="post" class="form">
+            {% csrf_token %}
+            {{form.as_p}}
+            <div><button type="submit">Salvar alterações</button></div>
+        </form>
+    </div>
 
 {% endblock content %}
 

@@ -1,9 +1,21 @@
-.content-table{
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+
+}
+
+.content-table {
     border-collapse: collapse;
-    margin: 25px;
+    margin: 8px;
     font-size: 1em;
     min-width: 400px;
     overflow: hidden;
+    width: 100%;
+    max-width: 100%;
 }
 
 .content-table thead tr {
@@ -13,9 +25,9 @@
     font-weight: bold;
 }
 
-.content-table th, 
+.content-table th,
 .content-table td {
-    padding: 12px 15px;
+    padding: 8px 16px;
 }
 
 .content-table tbody tr {
@@ -23,30 +35,38 @@
     background-color: #EEEBD3;
 }
 
-.content-table tbody tr:nth-last-of-type(even) {
-    background-color: #d6bf8580;
+.td-button {
+    display: flex;
 }
 
-tbody td button{
-    background-color: #437C90;
-    padding: 8px 16px;
-    width: fit-content;
+.content-table tbody tr:nth-last-of-type(even) {
+    background-color: rgba(215, 206, 185, 0.873);
+}
+
+tbody td button {
+    margin: 2px;
+    padding: 8px 8px;
+    min-width: 80px;
     border-radius: 10px;
     border: none;
 }
 
-.btn-editar{
+.btn-editar {
     background-color: rgb(58, 53, 194);
 }
-.btn-excluir{
+
+.btn-excluir {
     background-color: rgb(161, 29, 29);
 }
+
 tbody td button a {
     color: white;
 }
 
+.btn-editar:hover {
+    background-color: rgb(20, 18, 82);
+}
 
-
-
-
-
+.btn-excluir:hover {
+    background-color: rgb(99, 15, 15);
+}

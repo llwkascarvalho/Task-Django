@@ -2,32 +2,34 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista de atividades</title>
-    <link rel="stylesheet" href="static\tasks\css\task_list.css">
-    <link rel="stylesheet" href="static\tasks\css\base.css">
-    <link rel="shortcut icon" href="{% static 'tasks/img/logo.png' %}" type="image/x-icon">
-</head>
-<body>
+    <link rel="stylesheet" href="{% static 'tasks/css/task_list.css' %}" />
+    <link rel="stylesheet" href="{% static 'tasks/css/task_edit.css' %}" />
+    <link rel="stylesheet" href="{% static 'tasks/css/base.css' %}" />
+    <link
+      rel="shortcut icon"
+      href="{% static 'tasks/img/logo.png' %}"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
     <header>
-        <nav class="navbar">
-            <div class="navdiv">
-                <div class="logo"><a href="#">listDjango</a><img src="{% static 'tasks/img/logo.png' %}" alt=""></div>
-                <ul>
-                    <li><a href="{% url 'task-list' %}">Lista de atividades</a></li>
-                </ul>
-            </div>
-        </nav>
+      <nav class="navbar">
+        <div class="navdiv">
+          <div class="logo"><a href="#">listDjango</a></div>
+          <ul>
+            <li><a href="{% url 'task-list' %}">Lista de atividades</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
     <main class="conteudo">
-        <div class="container">
-            {% block content %}
-                <!-- O conteúdo especifico da página será exibido aqui -->
-            {% endblock  %}
-        </div>
+      {% block content %}
+      <!-- O conteúdo especifico da página será exibido aqui -->
+      {% endblock %}
     </main>
-    
-</body>
+  </body>
 </html>
